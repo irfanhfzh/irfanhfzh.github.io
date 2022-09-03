@@ -1,0 +1,536 @@
+:root {
+  --clr-primary: #333;
+  --clr-light: #eee;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  color: var(--clr-primary);
+  background-color: #ddd;
+}
+
+/* Container */
+.container-netzwerk {
+  display: grid;
+  gap: 10px;
+  margin: 35px;
+}
+
+/* Header */
+.header {
+  display: grid;
+  grid-template-areas:
+    "hero hero feature-1"
+    "hero hero feature-2";
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+.hero {
+  grid-area: hero;
+  min-height: 500px;
+  background-image: url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+}
+.hero > * {
+  display: none;
+}
+.features {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  color: var(--clr-light);
+  cursor: pointer;
+  text-shadow: 0 0 10px #333;
+  letter-spacing: 1.5px;
+  padding: 30px;
+}
+.feature-1 {
+  grid-area: feature-1;
+  background-image: url("../img/feature-1.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+.feature-2 {
+  grid-area: feature-2;
+  background-image: url("../img/feature-2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.features .title {
+  font-size: 2em;
+}
+
+/* Navigation */
+.menu {
+  order: -1;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+}
+.menu .brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+}
+.sub-head {
+  display: none;
+}
+.menu .brand h1 {
+  margin-right: 10px;
+}
+.menu ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+.menu ul .nav-brand {
+  display: none;
+}
+.menu a {
+  display: block;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+/* Hamburger Menu Navigation */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 999;
+}
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  top: -3px;
+  left: -6px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.5s;
+}
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+/* Jika Tombol Checkbox di Klik */
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+  background-color: var(--clr-light);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0);
+  background-color: var(--clr-light);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+
+/* About - Tentang Kami */
+.about-us {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.about {
+  margin-top: 30px;
+  background-color: #fff;
+  text-align: center;
+}
+.about .thumb {
+  border: 10px solid #fff;
+  overflow: hidden;
+}
+.about .thumb img {
+  max-width: 100%;
+  height: 330px;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+.about .thumb:hover img {
+  transform: scale(1.1);
+}
+.about .desc {
+  padding: 10px;
+  margin-top: -20px;
+}
+.about h3 {
+  font-size: 1.5em;
+}
+.about p {
+  font-size: 0.9em;
+}
+
+/* Galeri */
+.desc-galeri {
+  margin-bottom: 10px;
+}
+.galeri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 2fr));
+  gap: 10px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+.galeri .itemBox {
+  border: 10px solid #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+.galeri .itemBox a img {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+.galeri .itemBox a video {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+.galeri .itemBox a:hover img {
+  transform: scale(1.1);
+}
+/* filter gambar galeri */
+.filter-galeri {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.filter-galeri li {
+  list-style: none;
+  border: 2px solid var(--clr-primary);
+  color: var(--clr-primary);
+  padding: 8px 20px;
+  cursor: pointer;
+}
+.filter-galeri li.active {
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+}
+.filter-galeri li:hover {
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+}
+/* PopUp Image Gallery Slider */
+.galeri-image-view {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.galeri-image-box {
+  display: none;
+  width: 90vh;
+  height: 90vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+}
+#prev-btn,
+#next-btn {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+#prev-btn {
+  border-right: 40px solid grey;
+  left: -50%;
+}
+#next-btn {
+  border-left: 40px solid grey;
+  right: -50%;
+}
+#prev-btn:hover,
+#next-btn:hover {
+  opacity: 0.6;
+}
+
+/* Kontak */
+.kontak {
+  margin-bottom: 50px;
+}
+.kontak h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.kontak p {
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  text-align: center;
+  padding: 20px 0;
+  letter-spacing: 1px;
+}
+footer a {
+  text-decoration: none;
+  color: var(--clr-light);
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 1300px) {
+  .brand h1 {
+    font-size: 1.3em;
+  }
+  .brand p {
+    font-size: 1em;
+  }
+  .about-us {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  .about .thumb img {
+    height: 430px;
+  }
+  .about .desc {
+    padding: 10px 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    margin-bottom: 0;
+  }
+  .menu {
+    order: inherit;
+    grid-template-columns: 1fr;
+    margin-bottom: 50px;
+  }
+  .menu .brand {
+    display: none;
+  }
+  .hero > * {
+    display: block;
+    background-color: var(--clr-primary);
+    color: var(--clr-light);
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    font-size: 1.3em;
+  }
+  .about-us {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  .about .thumb img {
+    height: 400px;
+  }
+  .galeri {
+    grid-template-columns: repeat(auto-fit, minmax(185px, 2fr));
+  }
+}
+@media screen and (max-width: 806px) {
+  .hero {
+    font-size: 1.2em;
+  }
+  .about-us {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .about .thumb img {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sub-head {
+    position: absolute;
+    display: block;
+    left: 0;
+    margin-left: 35px;
+    font-size: 36px;
+    letter-spacing: 1.5px;
+  }
+  .header {
+    margin-bottom: 50px;
+  }
+  .features {
+    cursor: default;
+  }
+  .galeri .itemBox {
+    cursor: default;
+  }
+  .hero {
+    font-size: 1em;
+  }
+  .menu {
+    display: flex;
+    order: -1;
+    justify-items: end;
+    justify-content: end;
+    margin-bottom: 20px;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .menu-toggle .active {
+    position: fixed;
+  }
+  .menu ul {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--clr-primary);
+    z-index: 1;
+    transform: translateY(-100%);
+    transition: all 0.5s;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+  }
+  .menu ul .nav-brand {
+    display: block;
+    color: var(--clr-light);
+    letter-spacing: 1px;
+  }
+  .menu ul .nav-brand.satu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 30px;
+    margin-top: 27px;
+  }
+  .menu ul .nav-brand.dua {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 75px;
+    text-transform: capitalize;
+  }
+  /* Kalau class .slidenya 0 maka navigasi untuk mobile akan muncul dengan script JS*/
+  .menu ul.slide {
+    opacity: 1;
+    transform: translateY(0);
+    position: fixed;
+  }
+  .about-us {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .filter-galeri {
+    justify-content: center;
+  }
+  footer {
+    font-size: 0.9em;
+    padding: 20px 50px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container-netzwerk {
+    margin: 20px;
+  }
+  .sub-head {
+    margin-left: 20px;
+    font-size: 28px;
+  }
+  .menu {
+    margin-bottom: 10px;
+  }
+  .menu ul .nav-brand.satu {
+    margin-top: 13px;
+  }
+  .header {
+    grid-template-areas:
+      "hero"
+      "feature-1"
+      "feature-2";
+  }
+  .hero {
+    align-items: center;
+  }
+  .features {
+    min-height: 200px;
+  }
+  .about-us {
+    gap: 10px;
+  }
+  .about .thumb img {
+    height: 430px;
+  }
+  .galeri {
+    grid-template-columns: 1fr 1fr;
+  }
+  .kontak {
+    font-size: 0.9em;
+  }
+  footer {
+    font-size: 0.8em;
+    padding: 20px 50px;
+  }
+}
+@media screen and (max-width: 328px) {
+  .sub-head {
+    margin-left: 5px;
+  }
+  .menu {
+    margin-top: 15px;
+  }
+  .container-netzwerk {
+    margin: 5px;
+    gap: 0;
+  }
+  footer {
+    margin-right: -5px;
+  }
+}

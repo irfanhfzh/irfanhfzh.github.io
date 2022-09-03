@@ -1,0 +1,573 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Custom Variables */
+:root {
+  --clr-primary: #1a7119 !important;
+  --clr-secondary: red !important;
+}
+/* END Custom Variables */
+
+/* Customize CSS from Bootstrap Classes */
+.text-success {
+  color: var(--clr-primary) !important;
+}
+.text-danger {
+  color: var(--clr-secondary);
+}
+.btn:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset,
+    0px 0px 8px rgba(26, 113, 25, 0.5);
+}
+.btn-success {
+  background-color: var(--clr-primary) !important;
+  border-radius: 10px;
+  padding: 10px 18px;
+}
+.btn-danger {
+  background-color: var(--clr-secondary);
+  border-radius: 10px;
+  padding: 7px 15px;
+}
+.form-control {
+  border-radius: 10px;
+}
+.form-control:focus {
+  border-color: var(--clr-primary) !important;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset,
+    0px 0px 8px rgba(26, 113, 25, 0.5);
+}
+.bg-success {
+  background-color: var(--clr-primary) !important;
+}
+.bg-danger {
+  background-color: var(--clr-secondary) !important;
+}
+/* END Customize CSS from Bootstrap Classes */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 18px;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+hr {
+  width: 85%;
+  height: 5px !important;
+  background-color: #000 !important;
+  color: #000 !important;
+  opacity: 1;
+}
+
+/* Custom Global CSS */
+.text--shadow {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.drop--shadow {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.product--shadow {
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+}
+.tokopedia p,
+.shopee p,
+.instagram p,
+.facebook p {
+  font-size: 16px;
+}
+.nav--shadow {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.navigation-menu .nav-item .nav-link {
+  padding: 0;
+  color: #000;
+}
+.navigation-menu .nav-item .nav-link.active {
+  color: var(--clr-secondary);
+  font-weight: 700;
+}
+.f-oswald {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+.fw-semi {
+  font-weight: 600;
+}
+.img-galeri {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.btn {
+  border: none !important;
+}
+/* Floatin WA Button */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+/* END Floatin WA Button */
+/* Back To Top Button */
+#myBtn {
+  display: none;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--clr-secondary);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#myBtn:hover {
+  opacity: 0.9;
+}
+/* END Back To Top Button */
+/* END Custom Global CSS */
+
+/* Home/Beranda Page CSS */
+.checked {
+  color: orange;
+}
+.jumbotron-title {
+  font-size: 48px;
+}
+.bg-proyek {
+  background-image: url("../../src/assets/img/Bg\ Proyek\ Besar.png");
+  background-size: cover;
+}
+.jumbotron-content h5 {
+  font-size: 24px;
+}
+/* END Home/Beranda Page CSS */
+
+/* Product Page CSS */
+.filterDiv {
+  display: none;
+}
+.show {
+  display: block;
+}
+.btn.btn-filter-product {
+  border: 2px solid var(--clr-primary) !important;
+}
+.btn-filter-product {
+  border-color: var(--clr-primary) !important;
+  color: var(--clr-primary);
+  border-radius: 10px;
+  padding: 10px 18px;
+}
+.btn-filter-product:hover {
+  background-color: var(--clr-primary) !important;
+  color: white;
+}
+.btn-filter-product.active-filter {
+  background-color: var(--clr-primary) !important;
+  color: white;
+}
+.product-text p {
+  font-size: 18px;
+}
+.produk-lainnya h2 {
+  margin-bottom: 0 !important;
+}
+/* END Product Page CSS */
+/* Detail Product Page CSS */
+#slide-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#slider {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 60px;
+  cursor: pointer;
+  opacity: 0.5;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  z-index: 9;
+}
+.arrow.left {
+  left: 5px;
+}
+.arrow.right {
+  right: 5px;
+}
+.arrow:hover {
+  opacity: 1;
+}
+.thumbnail-img {
+  width: 25%;
+  height: fit-content;
+  cursor: pointer;
+  margin: 3px;
+  opacity: 0.5;
+  transition: all 0.5s ease;
+}
+.thumbnail-img:hover {
+  opacity: 1;
+}
+.thumbnail-img.active-thumbnail {
+  opacity: 1;
+}
+/* END Detail Product Page CSS */
+
+/* About Page CSS */
+.img-galeri-container {
+  background-image: url("../../src/assets/img/gallery/15.jpg");
+  background-size: cover;
+  border-radius: 10px;
+  width: 100%;
+  height: 600px;
+  transition: all 0.3s ease-in-out;
+  filter: brightness(100%);
+}
+.img-galeri-container:hover {
+  filter: brightness(50%);
+}
+.btn-more {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+}
+.kolom-img img {
+  border-radius: 10px;
+}
+/* END About Page CSS */
+
+/* Contact Page CSS */
+.body-contact {
+  height: 100vh;
+}
+.contact-elem {
+  margin-left: 50px;
+}
+.kotak-map {
+  width: 523px;
+  height: 705px;
+  background-color: var(--clr-primary) !important;
+}
+.map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  bottom: 20px;
+  right: 20px;
+}
+/* END Contact Page CSS */
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 16px;
+  }
+  .kotak-map {
+    width: 438px;
+    height: 590px;
+  }
+  .kolom-2-about h1 {
+    font-size: calc(1.15rem + 1.5vw);
+  }
+  .product-body h5 {
+    font-size: 18px;
+  }
+  .product-text p {
+    font-size: 16px;
+  }
+  .jumbotron-content h5 {
+    font-size: 18px;
+  }
+  .jumbotron-title {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .contact-elem {
+    margin-left: 0;
+  }
+  .kolom-2-about h5,
+  .kolom-1-contact h5 {
+    font-size: 16px;
+  }
+  .kotak-map {
+    width: 400px;
+    height: 520px;
+  }
+}
+@media screen and (max-width: 878px) {
+  .whatsapp p {
+    font-size: 16px;
+  }
+  .tokopedia p,
+  .shopee p,
+  .instagram p,
+  .facebook p {
+    font-size: 14px;
+  }
+  .navigation-menu .nav-item .nav-link {
+    padding: 0;
+    font-size: 15.5px;
+  }
+  .navbar-brand img {
+    width: 90%;
+  }
+  .footer {
+    font-size: 16px;
+  }
+  .kotak-map {
+    width: 350px;
+    height: 500px;
+  }
+  .img-galeri-container {
+    height: 500px;
+  }
+  .btn-more {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .kolom-2-about h5,
+  .kolom-1-contact h5 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 792px) {
+  .navbar-brand img {
+    width: 80%;
+  }
+  .navigation-menu .nav-item .nav-link {
+    font-size: 15px;
+  }
+  .navigation-menu .nav-item .btn {
+    font-size: 13px;
+  }
+  .kotak-map {
+    width: 320px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .whatsapp img {
+    margin-right: 5px;
+  }
+  .tokopedia img,
+  .shopee img,
+  .instagram img,
+  .facebook img {
+    margin-left: 5px;
+  }
+  .tokopedia p,
+  .shopee p,
+  .instagram p,
+  .facebook p {
+    margin-left: 3px;
+  }
+  .navigation-menu .nav-item .nav-link {
+    margin: 5px;
+  }
+  .navbar-nav {
+    margin-bottom: 10px !important;
+  }
+  .kotak-map {
+    width: 100%;
+    height: 525px;
+  }
+  .kolom-img img {
+    border-radius: 8px;
+  }
+  .img-galeri-container {
+    height: 400px;
+  }
+  .card-body .d-flex p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .kotak-map {
+    margin-top: 80px;
+    width: 500px;
+    height: 525px;
+  }
+  .kolom-2-about {
+    margin-top: 30px;
+  }
+  .kolom,
+  .kolom-3 {
+    padding: 0 6rem;
+  }
+  .content {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .whatsapp p {
+    font-size: 16px;
+  }
+  .tokopedia img,
+  .shopee img,
+  .instagram img,
+  .facebook img {
+    margin-left: 30px;
+  }
+  .tokopedia img,
+  .shopee img {
+    margin-bottom: 1px;
+  }
+  .tokopedia p,
+  .shopee p,
+  .instagram p,
+  .facebook p {
+    display: none;
+  }
+  .img-galeri-container {
+    height: 350px;
+  }
+  .btn-more {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .navbar-brand img {
+    width: 70%;
+  }
+  .kolom {
+    margin-bottom: 2rem;
+    padding: 0 3rem;
+  }
+  .kolom-3 {
+    padding: 0 3rem;
+  }
+  .kolom img {
+    max-width: 80%;
+  }
+  .kotak-map {
+    width: 320px;
+    height: 400px;
+  }
+  .img-galeri-container {
+    height: 250px;
+  }
+  .btn-more {
+    font-size: 14px;
+  }
+  .btn-filter-product {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+  .card-body {
+    padding: 0.55rem;
+  }
+  .btn {
+    font-size: 14px;
+  }
+  .product-body h5 {
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .product-text {
+    font-size: 12px;
+  }
+  .product-text p {
+    font-size: 15px;
+  }
+  .lihat-selengkapnya {
+    font-size: 12px;
+  }
+  .jumbotron-title {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 458px) {
+  .kolom img {
+    max-width: 50%;
+  }
+  .kolom-3 h5,
+  .kolom h5 {
+    font-size: 16px;
+  }
+  .map {
+    bottom: 10px;
+    right: 10px;
+  }
+  .whatsapp p {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 405px) {
+  p {
+    font-size: 14px;
+  }
+  .navbar-brand img {
+    width: 60%;
+  }
+  .kolom,
+  .kolom-3 {
+    padding: 0 1rem;
+  }
+  .tokopedia img,
+  .shopee img,
+  .instagram img,
+  .facebook img {
+    margin-left: 15px;
+  }
+  .tokopedia p,
+  .shopee p,
+  .instagram p,
+  .facebook p {
+    display: none;
+  }
+  .kotak-map {
+    width: 260px;
+    height: 300px;
+  }
+  .jumbotron-brand {
+    font-size: 16px;
+  }
+  .jumbotron-content h5 {
+    font-size: 16px;
+  }
+  .jumbotron-title {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .whatsapp p {
+    display: none;
+  }
+  .kotak-map {
+    width: 100%;
+    height: 300px;
+  }
+  .jumbotron-title {
+    font-size: 24px;
+  }
+}

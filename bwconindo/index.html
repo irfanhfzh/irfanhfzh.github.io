@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Required meta tags -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Owl Carousel Theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/63aa25b477.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/bwconindo/src/css/styles.css" />
+
+    <title>BW CONINDO Property</title>
+  </head>
+  <body class="d-flex flex-column">
+    <!-- Floating Button -->
+    <div class="d-flex flex-column floating-btn align-items-center">
+      <!-- Floating Whatsaap Button -->
+      <a href="https://api.whatsapp.com/send/?phone=628121305767&amp;text&amp;app_absent=0" target="_blank" class="floating-whatsaap mb-3">
+        <img src="/bwconindo/src/assets/icons/floating-wa.png" alt="Whatsaap" class="img-fluid drop--shadow">
+      </a>
+      <!-- END Floating Whatsaap Button -->
+      <!-- Back To Top Button -->
+      <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+      <!-- END Back To Top Button -->
+    </div>
+    <!-- END Floating Button -->
+
+    <!-- Navigation Header -->
+    <header class="container-fluid px-md-4" style="background-color: red">
+      <div class="container-lg d-flex py-2">
+        <a
+          href="https://api.whatsapp.com/send/?phone=628121305767&amp;text&amp;app_absent=0"
+          class="whatsapp text-decoration-none text-white fw-bold d-flex align-items-center me-auto"
+          target="_blank"
+        >
+          <img
+            class="me-lg-2 me-md-1 drop--shadow"
+            src="/bwconindo/src/assets/icons/Icon Whatsapp.png"
+            alt=""
+          />
+          <p class="text--shadow">0812 1305 767</p>
+        </a>
+        <a
+          href="https://www.tokopedia.com/"
+          class="tokopedia text-decoration-none text-white fw-bold d-flex align-items-center"
+          target="_blank"
+        >
+          <p class="ms-md-3 ms-sm-2 text--shadow">Tokopedia</p>
+          <img
+            class="ms-lg-2 ms-md-1 drop--shadow"
+            src="/bwconindo/src/assets/icons/Icon Tokped.png"
+            alt=""
+          />
+        </a>
+        <a
+          href="https://shopee.co.id/"
+          class="shopee text-decoration-none text-white fw-bold d-flex align-items-center"
+          target="_blank"
+        >
+          <p class="ms-md-3 ms-sm-2 text--shadow">Shopee</p>
+          <img
+            class="ms-lg-2 ms-md-1 drop--shadow"
+            src="/bwconindo/src/assets/icons/Icon Shopee.png"
+            alt=""
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/bw_conindo_property/"
+          class="instagram text-decoration-none text-white fw-bold d-flex align-items-center"
+          target="_blank"
+        >
+          <p class="ms-md-3 ms-sm-2 text--shadow">Instagram</p>
+          <img
+            class="ms-lg-2 ms-md-1 drop--shadow"
+            src="/bwconindo/src/assets/icons/Icon IG.png"
+            alt=""
+          />
+        </a>
+        <a
+          href="https://www.facebook.com/bwconindopropertybekasi"
+          class="facebook text-decoration-none text-white fw-bold d-flex align-items-center"
+          target="_blank"
+        >
+          <p class="ms-md-3 ms-sm-2 text--shadow">Facebook</p>
+          <img
+            class="ms-lg-2 ms-md-1 drop--shadow"
+            src="/bwconindo/src/assets/icons/Icon FB.png"
+            alt=""
+          />
+        </a>
+      </div>
+    </header>
+    <!-- End Navigation Header -->
+
+    <!-- Navigation -->
+    <nav
+      class="navbar sticky-top navbar-expand-md navbar-light bg-white px-md-4 mt-3"
+      id="navbar"
+    >
+      <div class="container-lg">
+        <a class="navbar-brand" href="/bwconindo/">
+          <img class="img-fluid" src="/bwconindo/src/assets/img/Logo Header.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav align-items-center navigation-menu ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/bwconindo/"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-lg-4 ms-md-3" href="/bwconindo/product/">Produk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-lg-4 ms-md-3" href="/bwconindo/about/"
+                >Tentang Kami</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-lg-4 ms-md-3" href="/bwconindo/contact/">Kontak</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="btn btn-success ms-lg-4 ms-md-3"
+                href="https://api.whatsapp.com/send/?phone=628121305767&amp;text&amp;app_absent=0"
+                target="_blank"
+                >Pesan Sekarang</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navigation -->
+
+    <!-- Content -->
+    <div>
+      <div class="container-fluid px-md-4 py-md-5 py-3">
+        <div class="container-lg">
+          <div class="row align-items-center">
+            <div
+              class="jumbotron-content col-md-6 order-1 order-md-0 mt-5 mt-md-0"
+            >
+              <h5 class="f-oswald text-danger">
+                BW.CONINDO <span class="f-oswald text-success">PROPERTY</span>
+              </h5>
+              <h1 class="fw-bold jumbotron-title">
+                BUILDING PROPERTY <br />
+                PARTNER
+              </h1>
+              <hr />
+              <p class="me-lg-5">
+                Produsen Loster Beton Minimalis & Modern, Ornamen GRC Krawangan,
+                Kusen Beton, Cladding Wall, U Ditch Beton, Tutup Got, Property
+                untuk Rumah, Gedung, Masjid, Mushola, dan lain lain.
+              </p>
+              <a class="btn btn-success mt-4" href="https://api.whatsapp.com/send/?phone=628121305767&amp;text&amp;app_absent=0"
+              target="_blank">Konsultasi Langsung</a>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+              <img
+                class="img-galeri drop--shadow"
+                src="/bwconindo/src/assets/img/Image Jumbotron.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="mt-md-5 mt-2 py-5">
+            <div class="col-lg-6 col-md-8">
+              <h2 class="fw-bold me-md-0 me-3">Mengapa Memilih Kami ?</h2>
+              <p>
+                Kami menawarkan berbagai macam produk material/property bangunan
+                dengan bahan berkualitas dan harga yang murah.
+              </p>
+            </div>
+            <div
+              class="row text-center align-items-start gx-5 mt-md-5 mt-2 py-5"
+            >
+              <div class="col-lg-3 col-md-6 px-md-5 px-5">
+                <img
+                  class="img-why-us"
+                  src="/bwconindo/src/assets/icons/Gratis Ongkir.png"
+                  alt=""
+                />
+                <h5 class="fw-bold mt-4">Gratis Ongkir</h5>
+                <p class="mt-3">
+                  Gratis Ongkir untuk Wilayah JABODETABEK (S&K Berlaku)
+                </p>
+              </div>
+              <div class="col-lg-3 col-md-6 px-md-5 px-5 mt-lg-0 mt-md-0 mt-5">
+                <img
+                  class="img-why-us"
+                  src="/bwconindo/src/assets/icons/Pelayanan & Bantuan.png"
+                  alt=""
+                />
+                <h5 class="fw-bold mt-4">Pelayanan & Bantuan</h5>
+                <p class="mt-3">
+                  Pelayanan dan Bantuan Terbaik Secara Profesional Selama 24/7
+                  Jam
+                </p>
+              </div>
+              <div class="col-lg-3 col-md-6 px-md-5 px-5 mt-lg-0 mt-md-5 mt-5">
+                <img
+                  class="img-why-us"
+                  src="/bwconindo/src/assets/icons/Garansi.png"
+                  alt=""
+                />
+                <h5 class="fw-bold mt-4">Garansi</h5>
+                <p class="mt-3">
+                  Jika Produk Pecah/Rusak dari Pabrik maupun Selama Pengiriman
+                  maka akan Kami Ganti dengan yang Baru.
+                </p>
+              </div>
+              <div class="col-lg-3 col-md-6 px-md-5 px-5 mt-lg-0 mt-md-5 mt-5">
+                <img
+                  class="img-why-us"
+                  src="/bwconindo/src/assets/icons/Terpercaya.png"
+                  alt=""
+                />
+                <h5 class="fw-bold mt-4">Terpercaya</h5>
+                <p class="mt-3">
+                  Terpercaya Sejak 2010 Melayani Lebih dari Ratusan Klien dari
+                  Seluruh Indonesia
+                </p>
+              </div>
+            </div>
+            <div class="row pt-md-5 pt-2">
+              <div class="col">
+                <h2 class="align-items-center fw-bold">Produk Kami</h2>
+                <div
+                  class="d-flex flex-wrap justify-content-center justify-content-md-start align-items-center mb-md-3 mt-3"
+                  id="myBtnContainer"
+                >
+                  <button
+                    class="btn btn-filter-product active-filter me-md-3 me-2 mt-2 mt-md-0"
+                    onclick="filterSelection('all')"
+                  >
+                    Semua
+                  </button>
+                  <button
+                    class="btn btn-filter-product me-md-3 me-2 mt-2 mt-md-0"
+                    onclick="filterSelection('loster')"
+                  >
+                    Loster
+                  </button>
+                  <button
+                    class="btn btn-filter-product me-md-3 me-2 mt-2 mt-md-0"
+                    onclick="filterSelection('ornamen')"
+                  >
+                    Ornamen Kawangan
+                  </button>
+                  <button
+                    class="btn btn-filter-product me-md-3 me-2 mt-2 mt-md-0"
+                    onclick="filterSelection('cladding')"
+                  >
+                    Cladding Wall
+                  </button>
+                  <a
+                    class="fw-bold text-decoration-none text-success mt-2 mt-md-3 mt-lg-0 mx-lg-0 mx-md-auto ms-lg-auto"
+                    href="/bwconindo/product/"
+                    >Lihat Semua Produk</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="filterDiv loster gx-2 gx-md-4 col-lg-3 col-md-4 col-sm-6 col-6 mt-4">
+                <a
+                  class="text-decoration-none text-black"
+                  href="/bwconindo/product/detail-product.html"
+                >
+                  <div class="card product--shadow" style="width: 100%">
+                    <img
+                      src="/bwconindo/src/assets/img/BINGKAI Produk.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="product-body card-body">
+                      <h5 class="fw-bold text-dark card-title">
+                        Loster Beton Ukuran 12
+                      </h5>
+                      <h6 class="product-text card-text">
+                        Harga Satuan
+                        <p class="fw-bold mt-md-2 mt-1 text-success">
+                          Rp 10.000
+                        </p>
+                      </h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="filterDiv loster gx-2 gx-md-4 col-lg-3 col-md-4 col-sm-6 col-6 mt-4">
+                <a class="text-decoration-none text-black" href="/bwconindo/product/detail-product.html">
+                  <div class="card product--shadow" style="width: 100%">
+                    <img
+                      src="/bwconindo/src/assets/img/BINGKAI Produk.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="product-body card-body">
+                      <h5 class="fw-bold text-dark card-title">
+                        Loster Beton Ukuran 12
+                      </h5>
+                      <h6 class="product-text card-text">
+                        Harga Satuan
+                        <p class="fw-bold mt-md-2 mt-1 text-success">
+                          Rp 10.000
+                        </p>
+                      </h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="filterDiv ornamen gx-2 gx-md-4 col-lg-3 col-md-4 col-sm-6 col-6 mt-4">
+                <a class="text-decoration-none text-black" href="/bwconindo/product/detail-product.html">
+                  <div class="card product--shadow" style="width: 100%">
+                    <img
+                      src="/bwconindo/src/assets/img/BINGKAI Produk.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="product-body card-body">
+                      <h5 class="fw-bold text-dark card-title">
+                        GRC Ornamen Krawangan
+                      </h5>
+                      <h6 class="product-text card-text">
+                        Harga Satuan
+                        <p class="fw-bold mt-md-2 mt-1 text-success">
+                          Rp 600.000
+                        </p>
+                      </h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="filterDiv cladding gx-2 gx-md-4 col-lg-3 col-md-4 col-sm-6 col-6 mt-4">
+                <a class="text-decoration-none text-black" href="/bwconindo/product/detail-product.html">
+                  <div class="card product--shadow" style="width: 100%">
+                    <img
+                      src="/bwconindo/src/assets/img/BINGKAI Produk.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="product-body card-body">
+                      <h5 class="fw-bold text-dark card-title">
+                        Cladding Wall Ukuran 30
+                      </h5>
+                      <h6 class="product-text card-text">
+                        Harga Satuan
+                        <p class="fw-bold mt-md-2 mt-1 text-success">
+                          Rp 100.000
+                        </p>
+                      </h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-success mt-md-5 mt-2 py-md-5 py-4">
+        <div class="container-lg align-items-center px-md-4 py-md-5 py-3">
+          <h1 class="fw-bold text-white text-center px-md-0 px-5">
+            Testimoni dari Customer Kami
+          </h1>
+          <div class="text-center justify-content-center">
+            <a
+              href="https://search.google.com/local/reviews?placeid=ChIJVxevDYCPaS4RJmZ82vsC9Us&q=BW+CONINDO+property&hl=in&gl=ID"
+              target="_blank"
+              class="text-decoration-none text-white"
+              >Google Reviews</a
+            >
+          </div>
+          <div
+            class="owl-carousel owl-theme row gx-lg-5 gx-md-3 gx-2 mt-md-5 mt-4"
+          >
+            <div class="card drop--shadow p-lg-4 p-md-2 p-4">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <img
+                    class="img-fluid rounded-pill me-3"
+                    src="/bwconindo/src/assets/img/unnamed.png"
+                    alt=""
+                    style="width: 20%"
+                  />
+                  <h5 class="card-title fw-bold">chabib amirudin</h4>
+                </div>
+                <p class="card-text my-3">
+                  "produsen loster dan ornamen rumah"
+                </p>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+              </div>
+            </div>
+            <div class="card drop--shadow p-lg-4 p-md-2 p-4">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <img
+                    class="img-fluid rounded-pill me-3"
+                    src="/bwconindo/src/assets/img/fan.png"
+                    alt=""
+                    style="width: 20%"
+                  />
+                  <h5 class="card-title fw-bold">FAN 25</h5>
+                </div>
+                <p class="card-text my-3">"Produk bw conindo memang mantab"</p>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+              </div>
+            </div>
+            <div class="card drop--shadow p-lg-4 p-md-2 p-4">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <img
+                    class="img-fluid rounded-pill me-3"
+                    src="/bwconindo/src/assets/img/bti.png"
+                    alt=""
+                    style="width: 20%"
+                  />
+                  <h5 class="card-title fw-bold text-uppercase">
+                    bukan tukang insinyur
+                  </h5>
+                </div>
+                <p class="card-text my-3">"mantab"</p>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+              </div>
+            </div>
+            <div class="card drop--shadow p-lg-4 p-md-2 p-4">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <img
+                    class="img-fluid rounded-pill me-3"
+                    src="/bwconindo/src/assets/img/mufid.png"
+                    alt=""
+                    style="width: 20%"
+                  />
+                  <h5 class="card-title fw-bold">mufid af</h5>
+                </div>
+                <p class="card-text my-3">"is the best"</p>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+                <span class="fa-solid fa-star checked"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex bg-proyek py-5">
+        <div
+          class="container-lg text-white text-center px-md-4 py-md-5 py-3 my-auto"
+        >
+          <div class="row">
+            <div class="col-12 px-md-0 px-5">
+              <h1 class="fw-bold mb-md-5 mb-4">Anda Memiliki Proyek Besar ?</h1>
+              <p class="mb-md-4 mb-3">
+                Anda Ingin Berkonsultasi Langsung dengan Kami ?
+              </p>
+              <p class="mb-md-4 mb-3">
+                Kami Siap Menyediakan Loster Beton<br />
+                maupun Material/Property Bangunan Lainnya.
+              </p>
+              <p class="mb-md-5 mb-4">
+                Khususnya untuk Ornamen GRC Krawangan,<br />
+                Anda bisa Request Desain Ornamen sesuai yang diinginkan.
+              </p>
+              <div class="d-md-flex justify-content-center m-sm-5">
+                <a
+                  href="https://api.whatsapp.com/send/?phone=628121305767&amp;text&amp;app_absent=0"
+                  target="_blank"
+                  class="fw-bold btn btn-success me-sm-2 me-md-5 text--shadow"
+                >
+                  <img
+                    class="img-fluid me-1 drop--shadow"
+                    src="/bwconindo/src/assets/icons/Icon Whatsapp.png"
+                    alt=""
+                  />
+                  0812 14305 767
+                </a>
+                <a
+                  href="/bwconindo/contact"
+                  class="fw-bold btn btn-success mt-sm-0 mt-md-0 mt-3 text--shadow"
+                  >bwconindo@gmail.com</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Content -->
+
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+      <div class="container-fluid py-5 px-md-4" style="background-color: green">
+        <div class="container-lg">
+          <div class="row align-items-center">
+            <div
+              class="col-12 col-lg-3 col-xl-4 mx-auto mb-lg-0 mb-md-5 mb-sm-5 kolom"
+            >
+              <img
+                src="/bwconindo/src/assets/img/Logo Footer.png"
+                alt=""
+                class="img-fluid mb-3 drop--shadow"
+              />
+              <h5 class="fw-bold text-white">Building Property Partner</h5>
+              <p class="text-white">
+                Menyediakan Loster Beton Berkualitas, Ornamen GRC Krawangan dan
+                Beragam <br />
+                Material/Property Bangunan Lainnya.
+              </p>
+            </div>
+            <div
+              class="col-md-6 col-lg-3 col-xl-4 mx-auto mb-lg-0 mb-md-0 mb-sm-5 kolom"
+            >
+              <div class="contact-elem">
+                <h5 class="fw-bold text-white">Kontak</h5>
+                <p class="text-white my-1">0812 1305 767</p>
+                <a
+                  class="fw-bold btn btn-danger my-1 text--shadow"
+                  href="https://api.whatsapp.com/send/?phone=628121305767&amp;text&amp;app_absent=0"
+                  target="_blank"
+                >
+                  <img
+                    src="/bwconindo/src/assets/icons/Icon Whatsapp.png"
+                    alt=""
+                    class="me-1 drop--shadow"
+                  />
+                  Chat Via WA
+                </a>
+                <p class="text-white my-1">
+                  <a
+                    class="text-decoration-none text-white"
+                    href="https://www.instagram.com/bw_conindo_property/"
+                    target="_blank"
+                    >Instagram</a
+                  >
+                </p>
+                <p class="text-white my-1">
+                  <a
+                    class="text-decoration-none text-white"
+                    href="https://www.facebook.com/bwconindopropertybekasi"
+                    target="_blank"
+                    >Facebook</a
+                  >
+                </p>
+                <h5 class="fw-bold text-white mt-3">Toko Online</h5>
+                <p class="text-white my-1">
+                  <a
+                    class="text-decoration-none text-white"
+                    href="https://www.tokopedia.com/"
+                    target="_blank"
+                    >Tokopedia</a
+                  >
+                </p>
+                <p class="text-white my-1">
+                  <a
+                    class="text-decoration-none text-white"
+                    href="https://shopee.co.id/"
+                    target="_blank"
+                    >Shopee</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 col-xl-4 mx-auto kolom-3">
+              <h5 class="fw-bold text-white">Lokasi Workshop</h5>
+              <p class="text-white mb-3">
+                Jl. Perum Mutiara Gading Riviera Blok B3 No.28, Karangsatria,
+                Kec. Tambun Utara, Kabupaten Bekasi, Jawa Barat 17510.
+              </p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3456564032194!2d107.04649951475035!3d-6.218067162633806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f800daf1757%3A0x4bf502fbda7c6626!2sBW%20CONINDO%20property!5e0!3m2!1sid!2sid!4v1650183152196!5m2!1sid!2sid"
+                class="img-fluid drop--shadow"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container-fluid fw-bold text-white text-center py-2"
+        style="background-color: red"
+      >
+        <p class="text--shadow">Copyright &copy; 2022 BW CONINDO PROPERTY</p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+      integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- OWL CAROUSEL 2 -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Custom Javascript -->
+    <script src="/bwconindo/src/js/stickyShadow.js"></script>
+    <script src="/bwconindo/src/js/backToTop.js"></script>
+    <script src="/bwconindo/src/js/filterProduct.js"></script>
+    <!-- Custom jQuery -->
+    <script>
+      // Owl Carousel Testimoni Card
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        animateOut: "fadeOut",
+        animateIn: "fadeIn",
+        smartSpeed: 450,
+        margin: 30,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 2,
+          },
+          1200: {
+            items: 3,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
