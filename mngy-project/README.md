@@ -1,5 +1,5 @@
 # irfanhfzh.github.io
-https://irfanhfzh.github.io/mngy-project-pages/
+https://irfanhfzh.github.io/mngy-project/
 
 My GitHub Pages
 

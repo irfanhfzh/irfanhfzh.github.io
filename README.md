@@ -7,3 +7,4 @@ Irfan Hafizh GitHub Pages to publish some of the projects I have made.
 - [BW CONINDO Property Website](https://irfanhfzh.github.io/bwconindo/)
 - [Netzwerk Class TKJ B Website](https://irfanhfzh.github.io/netzwerk-class/)
 - [Task Code Kawah Edukasi Website](https://irfanhfzh.github.io/task-code/)
+- [MNGY Project Kawah Edukasi Website](https://irfanhfzh.github.io/mngy-project/)
