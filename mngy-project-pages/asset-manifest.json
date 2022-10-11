@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mngy-project/static/css/main.189be087.css",
+    "main.js": "/mngy-project/static/js/main.04200040.js",
+    "index.html": "/mngy-project/index.html",
+    "main.189be087.css.map": "/mngy-project/static/css/main.189be087.css.map",
+    "main.04200040.js.map": "/mngy-project/static/js/main.04200040.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.189be087.css",
+    "static/js/main.04200040.js"
+  ]
+}
