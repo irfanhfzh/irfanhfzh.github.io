@@ -63,17 +63,20 @@ body {
   padding: 32px 29px;
 }
 .card__info .card--category {
+  font-size: 12px;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.295em;
 }
 .card__info .card--title {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 600;
   font-family: var(--ff-fraunces);
   line-height: 94.3%;
   letter-spacing: -0.045em;
 }
 .card__info .card--desc {
+  font-weight: 400;
   line-height: 146.5%;
   letter-spacing: -0.05em;
 }
@@ -84,10 +87,11 @@ body {
 .card__info .card--discountPrice {
   color: var(--clr-dark-cyan);
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 600;
   font-family: var(--ff-fraunces);
 }
 .card__info .card--realPrice {
+  font-size: 12px;
   color: var(--clr-very-dark-blue);
   text-decoration: line-through;
   margin-left: 1rem;
