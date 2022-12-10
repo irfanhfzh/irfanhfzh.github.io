@@ -2,51 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
-    <title>Frontend Mentor | Product preview card component</title>
-
-    <!-- My Custom CSS -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        margin-top: 1.5rem;
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <title>Frontend Mentor | Product preview card component</title>
   </head>
   <body>
     <div class="card">
       <div class="card__image"></div>
       <div class="card__info">
-        <h3 class="card--category">Perfume</h3>
-        <h1 class="card--title">Gabrielle Essence Eau De Parfum</h1>
-        <p class="card--desc">
+        <h1 class="card--category">Perfume</h1>
+        <h2 class="card--title">Gabrielle Essence Eau De Parfum</h2>
+        <h3 class="card--desc">
           A floral, solar and voluptuous interpretation composed by Olivier
           Polge, Perfumer-Creator for the House of CHANEL.
-        </p>
+        </h3>
         <div class="card__prices">
-          <p class="card--discountPrice">$149.99</p>
-          <p class="card--realPrice">$169.99</p>
+          <h4 class="card--discountPrice">$149.99</h4>
+          <h5 class="card--realPrice">$169.99</h5>
         </div>
-        <button class="card--btn">
+        <a href="#" class="card--btn">
           <img src="images/icon-cart.svg" alt="Add to Cart Icon" />
           Add to Cart
-        </button>
+        </a>
       </div>
     </div>
 
@@ -54,7 +38,10 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Irfan Hafizh</a>.
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/irfanhfzh" target="_blank"
+        >Irfan Hafizh</a
+      >.
     </div>
   </body>
 </html>

@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
 
 :root {
   --clr-dark-cyan: hsl(158, 36%, 37%);
   --clr-dream: hsl(30, 38%, 92%);
-  --clr-very-dark-blue: hsl(228, 12%, 48%);
+  --clr-very-dark-blue: hsl(212, 21%, 14%);
   --clr-white: hsl(0, 0%, 100%);
+  --clr-font: #9699a6;
   --bg-color: #f3eae3;
   --bg-btn-hover: #1a4031;
   --fs-paragraph: 14px;
@@ -33,21 +34,22 @@ body {
 }
 
 .card {
-  width: 542px;
-  height: 406px;
+  width: auto;
+  height: auto;
   display: flex;
   background-color: var(--clr-white);
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
 }
 
 .card__image {
-  width: 271px;
+  width: 300px;
+  height: 450px;
   background-image: url(images/image-product-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -56,29 +58,32 @@ body {
 }
 
 .card__info {
-  width: 271px;
+  width: 300px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 32px 29px;
+  padding: 32px;
 }
 .card__info .card--category {
+  color: var(--clr-font);
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.295em;
+  letter-spacing: 5px;
 }
 .card__info .card--title {
+  color: var(--clr-very-dark-blue);
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   font-family: var(--ff-fraunces);
-  line-height: 94.3%;
-  letter-spacing: -0.045em;
+  line-height: 32px;
 }
 .card__info .card--desc {
-  font-weight: 400;
-  line-height: 146.5%;
-  letter-spacing: -0.05em;
+  color: var(--clr-font);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 23.2px;
 }
 .card__info .card__prices {
   display: flex;
@@ -86,22 +91,24 @@ body {
 }
 .card__info .card--discountPrice {
   color: var(--clr-dark-cyan);
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 600;
   font-family: var(--ff-fraunces);
 }
 .card__info .card--realPrice {
-  font-size: 12px;
-  color: var(--clr-very-dark-blue);
+  color: var(--clr-font);
+  font-size: 13.008px;
+  font-weight: 500;
   text-decoration: line-through;
-  margin-left: 1rem;
+  margin-left: 21px;
 }
 .card__info .card--btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 213px;
+  width: 100%;
   height: 43px;
+  text-decoration: none;
   color: var(--clr-white);
   background-color: var(--clr-dark-cyan);
   border: none;
@@ -110,6 +117,11 @@ body {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
 }
 .card__info .card--btn:hover {
   cursor: pointer;
@@ -122,6 +134,15 @@ body {
 }
 .card__info .card--btn > img {
   margin-right: 11px;
+}
+
+.attribution {
+  margin-top: 1.5rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 /* Mobile Breakpoints */
