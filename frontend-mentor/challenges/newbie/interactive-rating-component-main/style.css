@@ -92,7 +92,7 @@ h2.card__info {
   justify-content: center;
   position: relative;
 }
-.card__rate p {
+.card__rate span {
   position: absolute;
 }
 .card__rate input {
