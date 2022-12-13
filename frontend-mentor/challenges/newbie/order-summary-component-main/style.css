@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --clr-pale-blue: hsl(225, 100%, 94%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+  --clr-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
+  --clr-primary-hover: hsla(245, 75%, 52%, 0.5);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-pale-blue);
+  font-family: "Red Hat Display", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100vw 48.6vh;
+  padding: 1rem;
+}
+
+.card {
+  max-width: 100%;
+  /* min-width: 350px; */
+  width: 450px;
+  height: 696px;
+  background-color: white;
+  box-shadow: 0 40px 30px -10px rgb(23 65 97 / 10%);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.card__header {
+  width: 100%;
+  height: 220px;
+  background-image: url(images/illustration-hero.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+  -webkit-border-radius: 20px 20px 0 0;
+  -moz-border-radius: 20px 20px 0 0;
+  -ms-border-radius: 20px 20px 0 0;
+  -o-border-radius: 20px 20px 0 0;
+}
+
+.card__info {
+  width: 100%;
+  height: 480px;
+  padding: 2.9rem 3rem;
+  text-align: center;
+}
+.card__info .card--title {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--clr-dark-blue);
+}
+.card__info .card--paragraph {
+  margin-bottom: 1.2rem;
+  line-height: 1.6rem;
+  color: var(--clr-desaturated-blue);
+}
+
+.card__info--plan {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-very-pale-blue);
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+.card__info--plan .card__plan--container {
+  display: flex;
+  align-items: center;
+}
+.card__info--plan .card__plan--container div {
+  display: block;
+  margin-left: 1.2rem;
+}
+.card__info--plan .card__plan--container .card__plan--title {
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+  color: var(--clr-dark-blue);
+}
+.card__info--plan .card__plan--container .card__plan--price {
+  color: var(--clr-desaturated-blue);
+}
+.card__info--plan a {
+  color: var(--clr-bright-blue);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.card__info--plan a:hover {
+  color: var(--clr-primary-hover);
+  text-decoration: none;
+}
+
+.card__info--payment {
+  display: flex;
+  flex-direction: column;
+}
+.card__info--payment .card--paymentBtn {
+  width: 100%;
+  padding: 0.95rem;
+  background-color: var(--clr-bright-blue);
+  margin-bottom: 2rem;
+  color: white;
+  font-size: 0.94rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 20px 20px 0px rgb(39 10 170 / 17%);
+  border: none;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+.card__info--payment .card--paymentBtn:hover {
+  background-color: var(--clr-primary-hover);
+  transform: translateY(-1px);
+  -webkit-transform: translateY(-1px);
+  -moz-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  -o-transform: translateY(-1px);
+}
+.card__info--payment a {
+  color: var(--clr-desaturated-blue);
+  text-decoration: none;
+  font-weight: 700;
+}
+.card__info--payment a:hover {
+  color: var(--clr-dark-blue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--clr-bright-blue);
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    height: fit-content;
+  }
+  .card__info {
+    height: fit-content;
+    padding: 2rem 1.5rem;
+  }
+  .card--paragraph {
+    line-height: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card__info--plan {
+    padding: 0 0.75rem;
+  }
+  .card__info--plan .card__plan--container div {
+    margin-left: 0.5rem;
+  }
+}
