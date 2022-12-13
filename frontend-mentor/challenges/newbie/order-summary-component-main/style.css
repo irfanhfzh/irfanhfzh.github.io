@@ -23,6 +23,7 @@ body {
 }
 
 main {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,7 +37,6 @@ main {
 
 .card {
   max-width: 100%;
-  /* min-width: 350px; */
   width: 450px;
   height: 696px;
   background-color: white;
