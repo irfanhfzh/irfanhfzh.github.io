@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700&family=Lexend+Deca:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+  --clr-bright-orange: hsl(31, 77%, 52%);
+  --clr-dark-cyan: hsl(184, 100%, 22%);
+  --clr-very-dark-cyan: hsl(179, 100%, 13%);
+  --clr-transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --clr-very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+  --fs-default: 15px;
+  --ff-lexend-deca: "Lexend Deca", sans-serif;
+  --ff-big-shoulders-display: "Big Shoulders Display", cursive;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: var(--ff-lexend-deca);
+  background-color: var(--clr-very-light-gray-background-headings-buttons);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  width: 920px;
+  height: 498px;
+  overflow: hidden;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 307px;
+  height: 500px;
+  padding: 3rem;
+}
+.card .card__img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.card .card__title {
+  color: var(--clr-very-light-gray-background-headings-buttons);
+  margin-top: 1.8rem;
+  margin-bottom: 1.6rem;
+  font-family: var(--ff-big-shoulders-display);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.card .card__desc {
+  color: var(--clr-transparent-white-paragraphs);
+  font-size: var(--fs-default);
+  line-height: 1.55rem;
+}
+.card .card__btn {
+  width: fit-content;
+  margin-top: auto;
+  cursor: pointer;
+  font-size: var(--fs-default);
+  text-decoration: none;
+  padding: 0.805rem 1.839rem;
+  background-color: var(--clr-very-light-gray-background-headings-buttons);
+  border: 2px solid var(--clr-very-light-gray-background-headings-buttons);
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+.card .card__btn:hover {
+  color: var(--clr-very-light-gray-background-headings-buttons);
+  background-color: transparent;
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+
+.card__sedans {
+  background-color: var(--clr-bright-orange);
+}
+.card__sedans .card__btn {
+  color: var(--clr-bright-orange);
+}
+
+.card__suvs {
+  background-color: var(--clr-dark-cyan);
+}
+.card__suvs .card__btn {
+  color: var(--clr-dark-cyan);
+}
+
+.card__luxury {
+  background-color: var(--clr-very-dark-cyan);
+}
+.card__luxury .card__btn {
+  color: var(--clr-very-dark-cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--clr-dark-cyan);
+}
+
+@media screen and (max-width: 940px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 1510px;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card__container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    max-width: 330px;
+    min-height: 442px;
+    width: 90%;
+    height: auto;
+    padding: 2.9rem 3rem;
+  }
+
+  .card__sedans {
+    border-radius: 8px 8px 0 0;
+    -webkit-border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;
+    -ms-border-radius: 8px 8px 0 0;
+    -o-border-radius: 8px 8px 0 0;
+  }
+
+  .card__luxury {
+    border-radius: 0 0 8px 8px;
+    -webkit-border-radius: 0 0 8px 8px;
+    -moz-border-radius: 0 0 8px 8px;
+    -ms-border-radius: 0 0 8px 8px;
+    -o-border-radius: 0 0 8px 8px;
+  }
+}
