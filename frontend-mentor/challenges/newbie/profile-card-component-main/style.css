@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+  --clr-dark-cyan: hsl(185, 75%, 39%);
+  --clr-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --clr-dark-grayish-blue: hsl(227, 10%, 46%);
+  --clr-dark-gray: hsl(0, 0%, 59%);
+  --fs-default: 18px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--clr-dark-cyan);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  position: absolute;
+  display: grid;
+  grid-template-rows: 88px 108px 90px 2px 1fr;
+  width: 350px;
+  height: 374px;
+  z-index: 5;
+  background: url(images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: white;
+  box-shadow: 0 50px 80px 0 rgb(0 0 0 / 20%);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.card__img {
+  grid-row: 2 / 3;
+  justify-self: center;
+  border: 5px solid white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.card__dataUser {
+  margin-top: 16px;
+  width: 180px;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-row: 3;
+  justify-self: center;
+  letter-spacing: 0.005rem;
+}
+.card__dataUser .card--username {
+  font-size: var(--fs-default);
+}
+.card__dataUser .card--userage {
+  margin-left: 8px;
+  color: var(--clr-dark-grayish-blue);
+  font-size: var(--fs-default);
+  font-weight: 300;
+}
+.card__dataUser .card--usercity {
+  margin-top: 7px;
+  color: var(--clr-dark-grayish-blue);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+hr {
+  height: 0;
+  color: var(--clr-dark-gray);
+  opacity: 0.75;
+  grid-row: 4;
+}
+
+.card__footer {
+  padding: 1.4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  grid-row: 5;
+  text-align: center;
+}
+
+.card--followers h2,
+.card--likes h2,
+.card--photos h2 {
+  margin-top: 1px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.08rem;
+}
+.card--followers p,
+.card--likes p,
+.card--photos p {
+  margin-top: 5px;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.card--likes {
+  position: relative;
+  right: 5px;
+}
+.card--photos {
+  position: relative;
+  right: 5px;
+}
+
+.bg__patterns {
+  width: 100vw;
+  height: 100vh;
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 20px 35px 1fr;
+  grid-template-rows: 0.975fr 92px 0.66fr;
+}
+.bg__patternTop {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background-image: url(images/bg-pattern-top.svg);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+.bg__patternBottom {
+  grid-column: 2 / 5;
+  grid-row: 2 / 4;
+  background-image: url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position-x: left;
+}
+
+.attribution {
+  position: absolute;
+  bottom: -38px;
+  left: 38px;
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: white;
+}
+
+@media screen and (max-width: 450px) {
+  .card {
+    width: 90%;
+    max-width: 330px;
+  }
+  .attribution {
+    left: 26px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .attribution {
+    left: 7px;
+  }
+}
