@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --clr-Light-Cyan: hsl(179, 47%, 52%);
+  --clr-Cyan: hsl(179, 62%, 43%);
+  --clr-Bright-Yellow: hsl(71, 73%, 54%);
+  --clr-Light-Gray: hsl(204, 43%, 93%);
+  --clr-Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Karla", sans-serif;
+  background-color: var(--clr-Light-Gray);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  min-height: 100vh;
+  width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "community community"
+    "cardSubscription cardWhyUS";
+  max-width: 100%;
+  width: 636px;
+  height: 475px;
+  overflow: hidden;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  box-shadow: 0 15px 30px rgb(0 0 0 / 12%);
+}
+
+.card__community {
+  grid-area: community;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 215px;
+  padding: 40px 48px 40px 40px;
+  background-color: white;
+}
+.card__community h1 {
+  color: var(--clr-Cyan);
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.0125em;
+}
+.card__community h2 {
+  color: var(--clr-Bright-Yellow);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.0025em;
+}
+.card__community p {
+  color: var(--clr-Grayish-Blue);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 163.4%;
+  letter-spacing: -0.0175em;
+  margin-right: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 44px 40px 40px;
+  color: white;
+}
+
+.card--subscription {
+  grid-area: cardSubscription;
+  background-color: var(--clr-Cyan);
+}
+.card--subscription button {
+  margin-top: auto;
+  width: 100%;
+  height: 48px;
+  color: white;
+  font-size: 16.15px;
+  cursor: pointer;
+  background-color: var(--clr-Bright-Yellow);
+  border: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  box-shadow: 0 8px 18px rgb(0 0 0 / 14%);
+}
+.card--subscription button:hover {
+  background-color: white;
+  color: var(--clr-Cyan);
+  transform: translateY(-1px);
+  -webkit-transform: translateY(-1px);
+  -moz-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  -o-transform: translateY(-1px);
+}
+
+.card--whyUS {
+  grid-area: cardWhyUS;
+  background-color: var(--clr-Light-Cyan);
+}
+.card--whyUS .card--desc {
+  margin-top: auto;
+}
+
+.card--title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.0125em;
+}
+.card--desc {
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 1.25rem;
+  letter-spacing: 0.003rem;
+}
+.card--text {
+  font-size: 16px;
+  font-weight: 200;
+  margin-top: 8px;
+  margin-bottom: 26px;
+}
+.card__prices {
+  display: flex;
+  align-items: center;
+  margin-top: 13px;
+}
+.card--price {
+  font-size: 32px;
+  font-weight: 700;
+}
+.card--plan {
+  margin-left: 14px;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--clr-Cyan);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: 100%;
+    min-height: 900px;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+  }
+
+  .wrapper {
+    width: 90%;
+    max-width: 450px;
+    height: auto;
+    grid-template-areas:
+      "community"
+      "cardSubscription"
+      "cardWhyUS";
+  }
+
+  .card__community {
+    width: 100%;
+    height: 268px;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  .card__community h2 {
+    margin: 1rem 0;
+  }
+  .card__community p {
+    margin-right: unset;
+  }
+
+  .card--subscription,
+  .card--whyUS {
+    width: 100%;
+    height: 228px;
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card__community {
+    padding: 1.25rem;
+  }
+  .card__community h1 {
+    font-size: 20px;
+  }
+  .card__community h2 {
+    margin: 0.5rem 0;
+  }
+}
