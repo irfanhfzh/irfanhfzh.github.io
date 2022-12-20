@@ -161,6 +161,7 @@ main {
   display: none;
   font-size: var(--fs-default);
   font-weight: 300;
+  color: black !important;
   line-height: 17.64px;
   letter-spacing: 0.55%;
   margin-bottom: 1rem;

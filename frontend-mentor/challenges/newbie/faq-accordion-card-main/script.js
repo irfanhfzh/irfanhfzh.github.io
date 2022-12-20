@@ -1,21 +1,22 @@
-const paragItem = document.querySelectorAll(".card__accordion");
-const btnItem = document.querySelectorAll(".elementImgAccordion");
-const itemInfo = document.querySelectorAll(".card--accordionDesc");
-const itemTitle = document.querySelectorAll(".card--accordionTitle");
+const accordionItem = document.querySelectorAll(".card__accordion");
+const btnAccordionItem = document.querySelectorAll(".elementImgAccordion");
+const accordionDesc = document.querySelectorAll(".card--accordionDesc");
+const accordionTitle = document.querySelectorAll(".card--accordionTitle");
 
-paragItem.forEach((item, index) => {
+accordionItem.forEach((item, index) => {
   item.addEventListener("click", () => {
-    let valor = index;
-    let todos = [0, 1, 2, 3, 4];
-    todos.forEach((elemento) => {
-      if (valor != elemento) {
-        btnItem[elemento].classList.remove("rotate");
-        itemInfo[elemento].classList.remove("elementDescActive");
-        itemTitle[elemento].classList.remove("bolder");
+    let idx = index;
+    let item = [0, 1, 2, 3, 4];
+
+    item.forEach((el) => {
+      if (idx != el) {
+        btnAccordionItem[el].classList.remove("rotate");
+        accordionDesc[el].classList.remove("elementDescActive");
+        accordionTitle[el].classList.remove("bolder");
       } else {
-        btnItem[valor].classList.add("rotate");
-        itemInfo[valor].classList.add("elementDescActive");
-        itemTitle[valor].classList.add("bolder");
+        btnAccordionItem[idx].classList.add("rotate");
+        accordionDesc[idx].classList.add("elementDescActive");
+        accordionTitle[idx].classList.add("bolder");
       }
     });
   });
