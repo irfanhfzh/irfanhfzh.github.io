@@ -1,0 +1,474 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mali", cursive;
+}
+
+html {
+  scroll-padding-top: 0.75rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+
+.writing--mode {
+  writing-mode: vertical-lr;
+}
+.text--vertical {
+  font-size: 1rem;
+  text-orientation: mixed;
+}
+.emote--love {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+.text--footer {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: left;
+}
+.hiddenText {
+  display: none;
+  position: absolute;
+  color: black;
+  font-size: 18px;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  z-index: 999;
+}
+.hiddenText2 {
+  display: none;
+  position: absolute;
+  color: black;
+  font-size: 18px;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  z-index: 998;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 430px;
+  min-height: 100dvh;
+  background-color: white;
+  padding: 0.75rem;
+  overflow: hidden;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100dvh - 1.5rem);
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background-color: #30a2ff;
+  background-image: url("assets/images/giphy.webp"),
+    url("assets/images/group-block.png");
+  background-repeat: no-repeat;
+  background-size: 165px 110px, cover;
+  background-position: bottom right, center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.card__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 0.75rem;
+}
+.card__title--sm {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.card__text--usia {
+  font-size: 1.125rem;
+  line-height: 150%;
+}
+.card__center {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card__countdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.card__time {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 196px;
+}
+.card__time--title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px black;
+}
+.card__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin-right: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.card__box--title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: black;
+}
+
+.card__content#card__content--dua {
+  gap: 1rem;
+  background-image: url("assets/images/hbd.gif"),
+    url("assets/images/group-selamat-ulang-tahun.png");
+  background-repeat: no-repeat;
+  background-size: 262px 174px, cover;
+  background-position: bottom -5px left -30px, center;
+}
+.card__title--intro {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.card__title--usia {
+  margin-top: -1rem;
+  font-size: 8rem;
+  font-weight: 700;
+}
+.card__title--name {
+  margin-top: -1.5rem;
+  font-size: 1.5rem;
+  line-height: 35px;
+  font-weight: 700;
+}
+.card__wrapper--btn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card__btn {
+  align-self: flex-end;
+  width: fit-content;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.card__btn:nth-child(2),
+.card__btn--next {
+  margin-bottom: 0.5rem;
+}
+
+.card__content#card__content--tiga {
+  background-image: url("assets/images/group-tai.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__footer > div:first-child {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  margin-right: 1.5rem;
+}
+.card__footer > div:first-child > div > a {
+  margin-left: 1.25rem;
+  margin-right: -0.5rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.card__footer > .card__wrapper--btn {
+  align-self: flex-end;
+}
+
+.card__content#card__content--empat {
+  position: relative;
+  background-image: url("assets/images/thanks-grateful.gif"),
+    url("assets/images/group-terimakasih.png");
+  background-repeat: no-repeat;
+  background-size: 135px 117px, cover;
+  background-position: bottom left, center;
+}
+.card__footer--empat {
+  display: flex;
+  align-items: center;
+}
+
+/* Gift Box */
+.gift__box {
+  position: absolute;
+  right: 75px;
+  margin-bottom: -1rem;
+  width: 150px;
+  height: 100px;
+  background-color: #e9c46a;
+  transform: scale(0.7);
+  border: 1px solid black;
+}
+.gift__box::before {
+  content: "";
+  position: absolute;
+  left: 62px;
+  width: 25px;
+  height: 100px;
+  background-color: #e76f51;
+}
+#click {
+  display: none;
+}
+.click {
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  width: 170px;
+  height: 20px;
+  background-color: #e9c46a;
+  transform-origin: bottom left;
+  transition: 0.5s;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.click::before {
+  content: "";
+  position: absolute;
+  left: 72px;
+  width: 25px;
+  height: 20px;
+  background-color: #e76f51;
+}
+.click::after {
+  content: "";
+  position: absolute;
+  top: -45px;
+  left: 69px;
+  width: 5px;
+  height: 0;
+  border-bottom: 30px solid #e76f51;
+  border-top: 30px solid #e76f51;
+  border-left: 0px solid #e76f51;
+  border-right: 30px solid transparent;
+  transform: rotate(-90deg);
+}
+#click:checked + .click {
+  transform: rotate(-110deg) scale(0.85);
+}
+#click:checked ~ .wishes {
+  z-index: 0;
+  font-size: 3.5rem;
+  transform: translateY(-100px);
+  transition: 0.75s;
+}
+.wishes {
+  transition: 0.15s;
+}
+
+/* Surat */
+.envelope-wrapper {
+  position: relative;
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  width: fit-content;
+  background: #f5edd1;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+.envelope-wrapper > .envelope {
+  position: relative;
+  width: 300px;
+  height: 230px;
+}
+.envelope-wrapper > .envelope::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-top: 130px solid #ecdeb8;
+  border-right: 150px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: all 0.5s ease-in-out 0.7s;
+}
+.envelope-wrapper > .envelope::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 0px;
+  height: 0px;
+  border-top: 130px solid transparent;
+  border-right: 150px solid #e6cfa7;
+  border-bottom: 100px solid #e6cfa7;
+  border-left: 150px solid #e6cfa7;
+}
+.envelope > .letter {
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  width: 60%;
+  height: fit-content;
+  background: #fff;
+  text-align: center;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.envelope > .letter > .text {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #444;
+  text-align: center;
+  font-size: 10px;
+}
+.envelope > .letter > .text > p {
+  margin-block: 0.75rem;
+}
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgb(252, 8, 231);
+  z-index: 4;
+  transform: translate(-50%, -20%) rotate(45deg);
+  transition: transform 0.5s ease-in-out 1s;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(252, 8, 231);
+  border-radius: 50%;
+}
+.heart:before {
+  top: -7.5px;
+  right: 0;
+}
+.heart:after {
+  right: 7.5px;
+}
+.flap > .envelope:before {
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+.flap > .envelope > .letter {
+  bottom: 200px;
+  transform: scale(1.35);
+  transition-delay: 1s;
+}
+.flap > .heart {
+  transform: rotate(225deg);
+  transition-delay: 0.4s;
+}
+
+/* Media Queries */
+@media screen and (max-width: 430px) {
+  .gift__box {
+    right: 65px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .card__content {
+    background-size: 157px 104px, cover;
+  }
+
+  .gift__box {
+    right: 55px;
+  }
+}
+@media screen and (max-width: 365px) {
+  .text--footer {
+    font-size: 0.75rem;
+  }
+
+  .card__content {
+    padding: 0.75rem;
+    background-size: 157px 104px, cover;
+  }
+  .card__title {
+    font-size: 1.45rem;
+  }
+
+  .card__content#card__content--dua {
+    background-size: 215px 142px, cover;
+  }
+  .card__content#card__content--dua > video {
+    width: 75%;
+    margin-top: 1rem;
+  }
+
+  .card__content#card__content--tiga > .envelope-wrapper {
+    transform: scale(0.85);
+  }
+  .card__content#card__content--tiga
+    > .card__footer
+    > div:first-child
+    > div
+    > a {
+    font-size: 0.75rem;
+  }
+
+  .gift__box {
+    right: 50px;
+    margin-bottom: -1.5rem;
+    transform: scale(0.5);
+  }
+
+  .card__content#card__content--empat > .card__title,
+  .card__content#card__content--dua > .card__title {
+    font-size: 1.25rem;
+  }
+  .card__content#card__content--empat {
+    background-size: 116px 101px, cover;
+  }
+}
+@media screen and (max-width: 320px) {
+  .gift__box {
+    right: 35px;
+    margin-bottom: -1.85rem;
+    transform: scale(0.45);
+  }
+}
