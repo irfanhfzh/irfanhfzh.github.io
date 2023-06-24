@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- now your day -->
+    <!-- This day is your birthday -->
     <div
       id="popupYourDay"
       style="
@@ -43,7 +43,7 @@
       "
     >
       <h1 style="-webkit-text-stroke: 1px black">
-        sekarang <br />
+        hari ini <br />
         adalah hari <br />
         ulang tahun <br />
         kamu
@@ -64,7 +64,8 @@
         >mulai perayaan sekarang</a
       >
     </div>
-    <!-- now your day -->
+    <!-- This day is your birthday -->
+
     <div class="card__wrapper">
       <!-- Card Countdown -->
       <div
@@ -136,6 +137,7 @@
       </div>
       <!-- End of Card Countdown -->
 
+      <!-- Card Birthday Content -->
       <div class="card__content cards--birthday" id="card__content--dua">
         <h2 class="card__title">🥳Happy Birthday🥳</h2>
         <audio id="clappingAudio">
@@ -172,11 +174,19 @@
           >&#8659;</a
         >
       </div>
-      <div class="card__content cards--birthday" id="card__content--tiga">
+      <div class="card__content cards--birthday tiga" id="card__content--tiga">
         <h2 class="card__title">
           Ucapan dari<br />
           <span>💩</span>Irfan Hafizh<span>💩</span>
         </h2>
+        <audio id="bacaSuratYa">
+          <source src="assets/audio/bacaSuratYa.mp3" type="audio/mpeg" />
+          Browser Anda tidak mendukung elemen audio.
+        </audio>
+        <audio id="audioSurat">
+          <source src="assets/audio/audioSurat.MP3" type="audio/mpeg" />
+          Browser Anda tidak mendukung elemen audio.
+        </audio>
         <h3 style="margin-top: 0.75rem">Baca Suratnya ya...</h3>
         <i style="margin-top: 0.5rem; margin-bottom: 3rem"
           >"Caranya tinggal klik Suratnya"</i
@@ -240,12 +250,12 @@
           Terima Kasih <br />
           🤗Sudah Berkunjung🤗
         </h2>
-        <audio id="boxHadiah">
-          <source src="assets/audio/boxhadiah.mp3" type="audio/mpeg" />
+        <audio id="bukaHadiah">
+          <source src="assets/audio/audioBukaHadiah.mp3" type="audio/mpeg" />
           Browser Anda tidak mendukung elemen audio.
         </audio>
-        <audio id="pakyu">
-          <source src="assets/audio/pakyu.mp3" type="audio/mpeg" />
+        <audio id="audioHadiah">
+          <source src="assets/audio/audioHadiah.mp3" type="audio/mpeg" />
           Browser Anda tidak mendukung elemen audio.
         </audio>
         <div
@@ -280,7 +290,7 @@
             <input
               type="checkbox"
               id="click"
-              onclick="if(this.checked){pakyuStart()}else{pakyuStop()}"
+              onclick="bukaBoxHadiah(this.checked)"
             />
             <label for="click" class="click"></label>
             <div class="wishes">🖕</div>
@@ -295,10 +305,10 @@
           >
         </div>
       </div>
+      <!-- End of Card Birthday Content -->
     </div>
 
     <script src="script.js"></script>
-    <script src="scriptBirthday.js"></script>
     <!-- Confetti  JS-->
     <script src="confetti.js"></script>
   </body>

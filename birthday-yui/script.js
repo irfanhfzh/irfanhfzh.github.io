@@ -1,7 +1,7 @@
-const baseUrl = window.location.origin;
 const cardWrapper = document.querySelector(".card__wrapper");
 const cards = document.querySelectorAll(".card__content");
 const cardCountdown = document.getElementById("card__content--countdown");
+const cardContentTiga = document.getElementById("card__content--tiga");
 const hiddenTextElement = document.getElementById("hiddenText");
 const hiddenTextElement2 = document.getElementById("hiddenText2");
 const usiaKamu = document.querySelectorAll("#usiaKamu");
@@ -10,73 +10,235 @@ const mulaiPerayaan = document.getElementById("mulai");
 const audio = document.getElementById("myAudio");
 const audioBacotLu = document.getElementById("bacotLu");
 const audioClap = document.getElementById("clappingAudio");
-const audioBoxHadiah = document.getElementById("boxHadiah");
-const audioPakyu = document.getElementById("pakyu");
+const audioBukaHadiah = document.getElementById("bukaHadiah");
+const audioHadiah = document.getElementById("audioHadiah");
+const audioBacaSuratYa = document.getElementById("bacaSuratYa");
+const audioSurat = document.getElementById("audioSurat");
+const audioSkipBacaSurat = document.getElementById("skipBacaSurat");
 const videoHbd = document.getElementById("videoHbd");
-const cardBtnDua = document.getElementById("card__btn--nextContent--dua");
+const cardsBtn = document.querySelectorAll(".card__btn");
+const cardBtnNextDua = document.getElementById("card__btn--nextContent--dua");
 const cardBtnPrevTiga = document.getElementById("card__btn--prevContent--tiga");
 const cardBtnNextTiga = document.getElementById("card__btn--nextContent--tiga");
-const cardBtnEmpat = document.getElementById("card__btn--prevContent--empat");
+const cardBtnPrevEmpat = document.getElementById(
+  "card__btn--prevContent--empat"
+);
+const click = document.getElementById("click");
+const clickLabel = document.querySelector(".click");
+const wishes = document.querySelector(".wishes");
+const envelope = document.querySelector(".envelope-wrapper");
 
-if (window.innerHeight >= "733") {
+const baseUrl = window.location.origin;
+const isOverflow = window.innerHeight >= "733";
+let giftBoxHadiah = false;
+let bacaSuratSelesai = false;
+let clickOneTime = false;
+
+envelope.addEventListener("click", () => {
+  envelope.classList.toggle("flap");
+  if (!clickOneTime) {
+    clickOneTime = true;
+    audioBacaSuratYa.pause();
+    audioBacaSuratYa.currentTime = 0;
+    setTimeout(() => {
+      audioSuratStart();
+    }, 2000);
+  } else {
+    clickOneTime = false;
+    audioSuratStop();
+  }
+});
+
+if (isOverflow) {
   document.body.style.overflow = "hidden";
-  cardBtnDua.addEventListener("click", () => {
-    videoHbd.removeAttribute("loop");
-    videoHbd.pause();
-    videoHbd.currentTime = 0;
+
+  cardBtnNextDua.addEventListener("click", () => {
+    audioClapAndConfettiStop();
+    videoCardDuaStop();
+    audioCardTigaStart();
   });
+
   cardBtnPrevTiga.addEventListener("click", () => {
-    audioClap.play();
-    audioClap.volume = 0.5;
-    videoHbd.play();
-    videoHbd.setAttribute("loop", "");
-    confetti.start();
-    audioClap.addEventListener("ended", () => {
-      confetti.stop();
-    });
+    if (clickOneTime) {
+      clickOneTime = false;
+      envelope.classList.toggle("flap");
+      audioSuratStop();
+    }
+
+    audioClapAndConfettiStart();
+    videoCardDuaStart();
+    audioCardTigaStop();
   });
+
   cardBtnNextTiga.addEventListener("click", () => {
-    audioBoxHadiah.play();
+    if (clickOneTime) {
+      clickOneTime = false;
+      envelope.classList.toggle("flap");
+      audioSuratStop();
+    }
+
+    audioCardTigaStop();
+    audioCardEmpatStart();
   });
-  cardBtnEmpat.addEventListener("click", () => {
-    audioBoxHadiah.pause();
-    audioBoxHadiah.currentTime = 0;
+
+  cardBtnPrevEmpat.addEventListener("click", () => {
+    audioCardTigaStart();
+    audioCardEmpatStop();
+
+    if (giftBoxHadiah) {
+      audioHadiahStop();
+      clickLabel.classList.remove("checked");
+      wishes.classList.remove("checked");
+      click.checked = false;
+    }
   });
 } else {
+  cardsBtn.forEach((cards) => {
+    cards.style.visibility = "hidden";
+  });
   document.body.style.overflow = "auto";
   videoHbd.setAttribute("controls", "");
-  cardBtnNextTiga.addEventListener("click", () => {
-    audioBoxHadiah.play();
-  });
-  cardBtnEmpat.addEventListener("click", () => {
-    audioBoxHadiah.pause();
-    audioBoxHadiah.currentTime = 0;
+
+  let oneTimeIsBelow = true;
+  let oneTimeVisible = false;
+  document.addEventListener("scroll", () => {
+    const visibilityCardContentTiga =
+      elementVisibility.elementIsVisibleInViewport(cardContentTiga, true);
+
+    if (visibilityCardContentTiga === "isBelow") {
+      oneTimeVisible = false;
+
+      if (!oneTimeIsBelow) {
+        oneTimeIsBelow = true;
+        audioClapAndConfettiStart();
+        videoCardDuaStart();
+      }
+
+      if (clickOneTime) {
+        clickOneTime = false;
+        envelope.classList.toggle("flap");
+        audioSuratStop();
+      }
+
+      audioCardTigaStop();
+    }
+
+    if (visibilityCardContentTiga === "visible") {
+      oneTimeIsBelow = false;
+
+      audioClapAndConfettiStop();
+      videoCardDuaStop();
+
+      if (!oneTimeVisible) {
+        oneTimeVisible = true;
+        audioCardTigaStart();
+      }
+
+      if (giftBoxHadiah) {
+        audioHadiahStop();
+        clickLabel.classList.remove("checked");
+        wishes.classList.remove("checked");
+        click.checked = false;
+      }
+
+      audioCardEmpatStop();
+    }
+
+    if (visibilityCardContentTiga === "isAbove") {
+      oneTimeVisible = false;
+
+      if (clickOneTime) {
+        clickOneTime = false;
+        oneTimeVisible = true;
+        envelope.classList.toggle("flap");
+        audioSuratStop();
+      } else {
+        audioCardTigaStop();
+        audioCardEmpatStart();
+      }
+    }
   });
 }
 
-function pakyuStart() {
-  audioBoxHadiah.pause();
-  audioBoxHadiah.currentTime = 0;
-  audioPakyu.play();
-  audioPakyu.volume = 0.5;
-  audioPakyu.loop = true;
+function audioClapAndConfettiStart() {
+  audioClap.play();
+  confetti.start();
+  audioClap.addEventListener("ended", () => {
+    confetti.stop();
+  });
 }
-function pakyuStop() {
-  audioPakyu.pause();
-  audioPakyu.currentTime = 0;
+function audioClapAndConfettiStop() {
+  audioClap.pause();
+  audioClap.currentTime = 0;
+  confetti.stop();
+}
+function videoCardDuaStart() {
+  videoHbd.play();
+  videoHbd.setAttribute("loop", "");
+}
+function videoCardDuaStop() {
+  videoHbd.removeAttribute("loop");
+  videoHbd.pause();
+  videoHbd.currentTime = 0;
+}
+function audioCardTigaStart() {
+  audioBacaSuratYa.play();
+}
+function audioCardTigaStop() {
+  audioBacaSuratYa.pause();
+  audioBacaSuratYa.currentTime = 0;
+}
+function audioCardEmpatStart() {
+  audioBukaHadiah.play();
+}
+function audioCardEmpatStop() {
+  audioBukaHadiah.pause();
+  audioBukaHadiah.currentTime = 0;
+}
+function audioSuratStart() {
+  audioSurat.play();
+}
+function audioSuratStop() {
+  audioSurat.pause();
+  audioSurat.currentTime = 0;
+}
+function audioHadiahStart() {
+  audioBukaHadiah.pause();
+  audioBukaHadiah.currentTime = 0;
+  audioHadiah.play();
+  audioHadiah.loop = true;
+}
+function audioHadiahStop() {
+  audioHadiah.pause();
+  audioHadiah.currentTime = 0;
 }
 
+function bukaBoxHadiah(event) {
+  giftBoxHadiah = event;
+
+  if (giftBoxHadiah) {
+    audioHadiahStart();
+    clickLabel.classList.add("checked");
+    wishes.classList.add("checked");
+    click.checked = true;
+  } else {
+    audioHadiahStop();
+    clickLabel.classList.remove("checked");
+    wishes.classList.remove("checked");
+    click.checked = false;
+  }
+}
 function mainkanSuara() {
   audio.currentTime = 0;
   audio.play();
 }
 
 function tampilkanTeks(event) {
-  let teksLebar = hiddenTextElement.offsetWidth;
-  let teksTinggi = hiddenTextElement.offsetHeight;
+  const teksLebar = hiddenTextElement.offsetWidth;
+  const teksTinggi = hiddenTextElement.offsetHeight;
 
-  let viewportLebar = window.innerWidth;
-  let viewportTinggi = window.innerHeight;
+  const viewportLebar = window.innerWidth;
+  const viewportTinggi = window.innerHeight;
 
   let posisiX = event.clientX;
   let posisiY = event.clientY;
@@ -102,7 +264,6 @@ function tampilkanTeks(event) {
   });
 }
 
-// Fungsi untuk menghitung usia berdasarkan tanggal lahir
 function calculateAge(birthDate) {
   const now = new Date();
   const birth = new Date(birthDate);
@@ -116,7 +277,7 @@ function calculateAge(birthDate) {
   return age;
 }
 
-const birthDate = "2002-07-24"; // Tanggal lahir Anda (format: "YYYY-MM-DD")
+const birthDate = "2002-07-24";
 const age = calculateAge(birthDate);
 
 usiaKamu.forEach((usia) => {
@@ -147,7 +308,6 @@ function updateCountdown() {
   const now = currentDate.getTime();
   const targetDate = new Date(`${currentYear}-07-24 00:00:00`).getTime();
 
-  // Untuk Countdown Timer
   const birthdayExpired = new Date(`${currentYear}-07-25 00:00:00`).getTime();
   const targetDateBirthday = new Date(
     `${now >= birthdayExpired ? currentYear + 1 : currentYear}-07-24 00:00:00`
@@ -162,7 +322,6 @@ function updateCountdown() {
     ? (hari.style.fontSize = "1.75rem")
     : (hari.style.fontSize = "2.25rem");
 
-  // Display the countdown in the browser
   hari.innerHTML =
     timeRemaining.days < 10 ? "0" + timeRemaining.days : timeRemaining.days;
   jam.innerHTML =
@@ -176,12 +335,11 @@ function updateCountdown() {
       ? "0" + timeRemaining.seconds
       : timeRemaining.seconds;
 
-  // Refresh the countdown every second
   let timeoutCountdown = setTimeout(updateCountdown, 1000);
 
-  if (now >= targetDate && birthdayExpired >= now) {
-    console.log("today is the day");
+  if (now >= targetDate && birthdayExpired > now) {
     clearTimeout(timeoutCountdown);
+
     cards.forEach((card) => {
       if (card.classList.contains("cards--birthday")) {
         card.style.display = "none";
@@ -189,6 +347,7 @@ function updateCountdown() {
         card.style.display = "flex";
       }
     });
+
     cardCountdown.removeAttribute("onclick");
     popupYourDay.style.display = "flex";
     cardWrapper.style.filter = "blur(10px)";
@@ -201,22 +360,21 @@ function updateCountdown() {
           card.style.display = "none";
         }
       });
+
       window.location.href = `${baseUrl}/#card__content--dua`;
       popupYourDay.style.display = "none";
       cardWrapper.style.filter = "none";
-      audioClap.play();
-      audioClap.volume = 0.5;
-      videoHbd.play();
-      videoHbd.setAttribute("loop", "");
-      confetti.start();
-      audioClap.addEventListener("ended", () => {
-        confetti.stop();
-      });
+      audioClapAndConfettiStart();
+      videoCardDuaStart();
     });
+
+    const refreshTimeout = setTimeout(() => {
+      window.location.reload();
+      clearTimeout(refreshTimeout);
+    }, birthdayExpired - now);
   } else {
-    document
-      .querySelector(".card__content")
-      .addEventListener("click", mainkanSuara);
+    cardCountdown.addEventListener("click", mainkanSuara);
+
     cards.forEach((card) => {
       if (card.classList.contains("cards--birthday")) {
         card.style.display = "none";
@@ -227,16 +385,42 @@ function updateCountdown() {
   }
 }
 
-// Start the countdown
 updateCountdown();
-
-const envelope = document.querySelector(".envelope-wrapper");
-envelope.addEventListener("click", () => {
-  envelope.classList.toggle("flap");
-});
 
 function smoothScroll(event) {
   event.preventDefault();
   const target = document.querySelector(event.target.getAttribute("href"));
   target.scrollIntoView({ behavior: "smooth" });
 }
+
+const elementVisibility = {
+  isBelowThreshold: false,
+  isAboveThreshold: false,
+
+  elementIsVisibleInViewport: function (el) {
+    const { top, bottom } = el.getBoundingClientRect();
+    const { innerHeight } = window;
+    const threshold = 0; // Jarak threshold tambahan yang diinginkan
+
+    this.isAboveThreshold = bottom < -threshold; // Cek jika elemen berada di atas viewport
+    this.isBelowThreshold = top >= innerHeight + threshold; // Cek jika elemen berada di bawah viewport
+
+    if (
+      ((top > 1000 && top < innerHeight) ||
+        (bottom > 500 && bottom < innerHeight)) &&
+      !this.isAboveThreshold &&
+      !this.isBelowThreshold
+    ) {
+      // Elemen sebagian terlihat dalam viewport
+      return "visible";
+    } else if (this.isBelowThreshold) {
+      // Elemen berada di bawah viewport
+      return "isBelow";
+    } else if (this.isAboveThreshold) {
+      // Elemen berada di atas viewport
+      return "isAbove";
+    }
+
+    return false;
+  },
+};

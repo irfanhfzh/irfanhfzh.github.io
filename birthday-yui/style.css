@@ -287,10 +287,12 @@ body {
   border-right: 30px solid transparent;
   transform: rotate(-90deg);
 }
-#click:checked + .click {
+#click:checked + .click,
+.click.checked {
   transform: rotate(-110deg) scale(0.85);
 }
-#click:checked ~ .wishes {
+#click:checked ~ .wishes,
+.wishes.checked {
   z-index: 0;
   font-size: 3.5rem;
   transform: translateY(-100px);
@@ -314,6 +316,7 @@ body {
   position: relative;
   width: 300px;
   height: 230px;
+  cursor: pointer;
 }
 .envelope-wrapper > .envelope::before {
   content: "";
