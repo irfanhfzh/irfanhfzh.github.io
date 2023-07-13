@@ -9,7 +9,7 @@
 			"technologyUsed": ["HTML", "CSS", "JavaScript", "Bootstrap"],
 			"category": "Project Iseng",
 			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/bwconindo",
-			"linkTo": "https://irfanhfzh.github.io/bwconindo/"
+			"linkTo": "https://irfanhfzh.github.io/projects/bwconindo/"
 		},
 		{
 			"id": 2,
@@ -19,7 +19,7 @@
 			"technologyUsed": ["HTML", "CSS", "JavaScript"],
 			"category": "Project Iseng",
 			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/netzwerk-class",
-			"linkTo": "https://irfanhfzh.github.io/netzwerk-class/"
+			"linkTo": "https://irfanhfzh.github.io/projects/netzwerk-class/"
 		},
 		{
 			"id": 3,
@@ -29,7 +29,7 @@
 			"technologyUsed": ["HTML", "CSS"],
 			"category": "Project Bootcamp",
 			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/task-code",
-			"linkTo": "https://irfanhfzh.github.io/task-code/"
+			"linkTo": "https://irfanhfzh.github.io/projects/task-code/"
 		},
 		{
 			"id": 4,
@@ -48,7 +48,7 @@
 			],
 			"category": "Project Bootcamp",
 			"sourceCode": "https://github.com/irfanhfzh/project-food-order-app",
-			"linkTo": "https://irfanhfzh.github.io/food-order-app/"
+			"linkTo": "https://irfanhfzh.github.io/projects/food-order-app/"
 		},
 		{
 			"id": 5,
@@ -64,7 +64,7 @@
 			],
 			"category": "Project Bootcamp",
 			"sourceCode": "https://github.com/irfanhfzh/project-mngy",
-			"linkTo": "https://irfanhfzh.github.io/mngy-project/"
+			"linkTo": "https://irfanhfzh.github.io/projects/mngy-project/"
 		},
 		{
 			"id": 6,
@@ -74,7 +74,7 @@
 			"technologyUsed": ["HTML", "CSS", "JavaScript"],
 			"category": "Project Iseng",
 			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/birthday-yui",
-			"linkTo": "https://irfanhfzh.github.io/birthday-yui/"
+			"linkTo": "https://irfanhfzh.github.io/projects/birthday-yui/"
 		}
 	]
 }
