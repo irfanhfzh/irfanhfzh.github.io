@@ -2,33 +2,37 @@
 	"message": "My Projects Info",
 	"data": [
 		{
+			"id": 1,
 			"src": "https://irfanhfzh.github.io/my-projects-info/images/bwconindo.png",
 			"title": "BW Conindo Property",
 			"desc": "Website company profile yang memproduksi Loster Beton Minimalis & Modern, Ornamen GRC Krawangan, Kusen Beton, Cladding Wall, U Ditch Beton, Tutup Got, Property untuk Rumah, Gedung, Masjid, Mushola, dan lain lain.",
 			"technologyUsed": ["HTML", "CSS", "JavaSscript", "Bootstrap"],
-			"category": 3,
+			"category": "Project Iseng",
 			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/bwconindo",
 			"linkTo": "https://irfanhfzh.github.io/bwconindo/"
 		},
 		{
+			"id": 2,
 			"src": "https://irfanhfzh.github.io/my-projects-info/images/netzwerkclass.png",
 			"title": "Netzwerk Class",
 			"desc": "Website kenang-kenangan untuk Kelas TKJ B dari Sekolah Menengah Kejuruan Panjatek di Kota Bekasi.",
 			"technologyUsed": ["HTML", "CSS", "JavaSscript"],
-			"category": 3,
+			"category": "Project Iseng",
 			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/netzwerk-class",
 			"linkTo": "https://irfanhfzh.github.io/netzwerk-class/"
 		},
 		{
+			"id": 3,
 			"src": "https://irfanhfzh.github.io/my-projects-info/images/taskcode.png",
 			"title": "Task Code",
 			"desc": "Website hasil pembelajaran dibulan ke-1 dari Bootcamp Frontend Kawah Edukasi.",
 			"technologyUsed": ["HTML", "CSS"],
-			"category": 0,
+			"category": "Project Bootcamp",
 			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/task-code",
 			"linkTo": "https://irfanhfzh.github.io/task-code/"
 		},
 		{
+			"id": 4,
 			"src": "https://irfanhfzh.github.io/my-projects-info/images/warunkhorizontal.png",
 			"title": "Warunk Horizontal",
 			"desc": "Website food order app, dimana ini adalah tugas dibulan ke-2 dari Bootcamp Frontend Kawah Edukasi, yang dikerjakan bersama tim, dimana saya menjadi Ketuanya, yang merancang, mendesain dan mengkoordinir anggota untuk mengerjakan tugas-tugasnya.",
@@ -42,11 +46,12 @@
 				"Redux",
 				"Immer.js"
 			],
-			"category": 0,
+			"category": "Project Bootcamp",
 			"sourceCode": "https://github.com/irfanhfzh/project-food-order-app",
 			"linkTo": "https://irfanhfzh.github.io/food-order-app/"
 		},
 		{
+			"id": 5,
 			"src": "https://irfanhfzh.github.io/my-projects-info/images/mngyproject.png",
 			"title": "MNGY Project",
 			"desc": "Website semacam todo list, yang mengkonsumsi data dari API jsonplaceholder, dimana ini adalah tugas dibulan ke-3 dari Bootcamp Frontend Kawah Edukasi, sebelum nanti lanjut ke proses magang.",
@@ -57,16 +62,17 @@
 				"Redux",
 				"Redux Saga"
 			],
-			"category": 0,
+			"category": "Project Bootcamp",
 			"sourceCode": "https://github.com/irfanhfzh/project-mngy",
 			"linkTo": "https://irfanhfzh.github.io/mngy-project/"
 		},
 		{
+			"id": 6,
 			"src": "https://irfanhfzh.github.io/my-projects-info/images/birthdayyui.png",
 			"title": "Birthday Yui",
 			"desc": "Website untuk menghitung mundur hari ulang tahun Yuliantika Laxmita Dewi, yang dimana jika hitung mundurnya sudah selesai akan muncul konten-konten spesial untuk ulang tahun Yuliantika Laxmita Dewi.",
 			"technologyUsed": ["HTML", "CSS", "JavaSscript"],
-			"category": 3,
+			"category": "Project Iseng",
 			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/birthday-yui",
 			"linkTo": "https://irfanhfzh.github.io/birthday-yui/"
 		}
