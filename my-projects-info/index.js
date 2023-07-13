@@ -1,9 +1,9 @@
-import BirthdayYui from "./screenshot-projects/birthdayyui.png";
-import BWConindo from "./screenshot-projects/bwconindo.png";
-import MNGYProject from "./screenshot-projects/mngyproject.png";
-import Netzwerk from "./screenshot-projects/netzwerkclass.png";
-import TaskCode from "./screenshot-projects/taskcode.png";
-import WarunkHorizontal from "./screenshot-projects/warunkhorizontal.png";
+import BirthdayYui from "./images/birthdayyui.png";
+import BWConindo from "./images/bwconindo.png";
+import MNGYProject from "./images/mngyproject.png";
+import Netzwerk from "./images/netzwerkclass.png";
+import TaskCode from "./images/taskcode.png";
+import WarunkHorizontal from "./images/warunkhorizontal.png";
 
 /**
  * 0 Project Bootcamp
