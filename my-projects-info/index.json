@@ -6,7 +6,7 @@
 			"src": "https://irfanhfzh.github.io/my-projects-info/images/bwconindo.png",
 			"title": "BW Conindo Property",
 			"desc": "Website company profile yang memproduksi Loster Beton Minimalis & Modern, Ornamen GRC Krawangan, Kusen Beton, Cladding Wall, U Ditch Beton, Tutup Got, Property untuk Rumah, Gedung, Masjid, Mushola, dan lain lain.",
-			"technologyUsed": ["HTML", "CSS", "JavaSscript", "Bootstrap"],
+			"technologyUsed": ["HTML", "CSS", "JavaScript", "Bootstrap"],
 			"category": "Project Iseng",
 			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/bwconindo",
 			"linkTo": "https://irfanhfzh.github.io/bwconindo/"
@@ -16,7 +16,7 @@
 			"src": "https://irfanhfzh.github.io/my-projects-info/images/netzwerkclass.png",
 			"title": "Netzwerk Class",
 			"desc": "Website kenang-kenangan untuk Kelas TKJ B dari Sekolah Menengah Kejuruan Panjatek di Kota Bekasi.",
-			"technologyUsed": ["HTML", "CSS", "JavaSscript"],
+			"technologyUsed": ["HTML", "CSS", "JavaScript"],
 			"category": "Project Iseng",
 			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/netzwerk-class",
 			"linkTo": "https://irfanhfzh.github.io/netzwerk-class/"
@@ -71,7 +71,7 @@
 			"src": "https://irfanhfzh.github.io/my-projects-info/images/birthdayyui.png",
 			"title": "Birthday Yui",
 			"desc": "Website untuk menghitung mundur hari ulang tahun Yuliantika Laxmita Dewi, yang dimana jika hitung mundurnya sudah selesai akan muncul konten-konten spesial untuk ulang tahun Yuliantika Laxmita Dewi.",
-			"technologyUsed": ["HTML", "CSS", "JavaSscript"],
+			"technologyUsed": ["HTML", "CSS", "JavaScript"],
 			"category": "Project Iseng",
 			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/birthday-yui",
 			"linkTo": "https://irfanhfzh.github.io/birthday-yui/"
