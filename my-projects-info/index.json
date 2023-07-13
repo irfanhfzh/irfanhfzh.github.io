@@ -8,7 +8,7 @@
 			"desc": "Website company profile yang memproduksi Loster Beton Minimalis & Modern, Ornamen GRC Krawangan, Kusen Beton, Cladding Wall, U Ditch Beton, Tutup Got, Property untuk Rumah, Gedung, Masjid, Mushola, dan lain lain.",
 			"technologyUsed": ["HTML", "CSS", "JavaScript", "Bootstrap"],
 			"category": "Project Iseng",
-			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/bwconindo",
+			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/projects/bwconindo",
 			"linkTo": "https://irfanhfzh.github.io/projects/bwconindo/"
 		},
 		{
@@ -18,7 +18,7 @@
 			"desc": "Website kenang-kenangan untuk Kelas TKJ B dari Sekolah Menengah Kejuruan Panjatek di Kota Bekasi.",
 			"technologyUsed": ["HTML", "CSS", "JavaScript"],
 			"category": "Project Iseng",
-			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/netzwerk-class",
+			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/projects/netzwerk-class",
 			"linkTo": "https://irfanhfzh.github.io/projects/netzwerk-class/"
 		},
 		{
@@ -28,7 +28,7 @@
 			"desc": "Website hasil pembelajaran dibulan ke-1 dari Bootcamp Frontend Kawah Edukasi.",
 			"technologyUsed": ["HTML", "CSS"],
 			"category": "Project Bootcamp",
-			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/task-code",
+			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/projects/task-code",
 			"linkTo": "https://irfanhfzh.github.io/projects/task-code/"
 		},
 		{
@@ -73,7 +73,7 @@
 			"desc": "Website untuk menghitung mundur hari ulang tahun Yuliantika Laxmita Dewi, yang dimana jika hitung mundurnya sudah selesai akan muncul konten-konten spesial untuk ulang tahun Yuliantika Laxmita Dewi.",
 			"technologyUsed": ["HTML", "CSS", "JavaScript"],
 			"category": "Project Iseng",
-			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/birthday-yui",
+			"sourceCode": "https://github.com/irfanhfzh/irfanhfzh.github.io/tree/master/projects/birthday-yui",
 			"linkTo": "https://irfanhfzh.github.io/projects/birthday-yui/"
 		}
 	]
