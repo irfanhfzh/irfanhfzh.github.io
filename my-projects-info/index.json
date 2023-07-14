@@ -54,7 +54,7 @@
 			"id": 5,
 			"src": "https://irfanhfzh.github.io/my-projects-info/images/mngyproject.png",
 			"title": "MNGY Project",
-			"desc": "Website semacam todo list, yang mengkonsumsi data dari API jsonplaceholder, dimana ini adalah tugas dibulan ke-3 dari Bootcamp Frontend Kawah Edukasi, sebelum nanti lanjut ke proses magang.",
+			"desc": "Website semacam todo list, yang mengonsumsi data dari API jsonplaceholder, dimana ini adalah tugas dibulan ke-3 dari Bootcamp Frontend Kawah Edukasi, sebelum nanti lanjut ke proses magang.",
 			"technologyUsed": [
 				"React.js",
 				"Bootstrap",
