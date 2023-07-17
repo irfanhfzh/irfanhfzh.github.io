@@ -44,7 +44,9 @@
 				"Framer Motion",
 				"Axios",
 				"Redux",
-				"Immer.js"
+				"Redux Persist",
+				"Immer.js",
+				"react-use-cart"
 			],
 			"category": "Project Bootcamp",
 			"sourceCode": "https://github.com/irfanhfzh/project-food-order-app",
@@ -64,7 +66,7 @@
 			],
 			"category": "Project Bootcamp",
 			"sourceCode": "https://github.com/irfanhfzh/project-mngy",
-			"linkTo": "https://irfanhfzh.github.io/projects/mngy-project/"
+			"linkTo": "https://scintillating-cascaron-a4bc1f.netlify.app/"
 		},
 		{
 			"id": 6,
