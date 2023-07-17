@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/mngy-project/static/css/main.189be087.css",
-    "main.js": "/mngy-project/static/js/main.04200040.js",
-    "index.html": "/mngy-project/index.html",
-    "main.189be087.css.map": "/mngy-project/static/css/main.189be087.css.map",
-    "main.04200040.js.map": "/mngy-project/static/js/main.04200040.js.map"
+    "main.css": "/static/css/main.003e034f.css",
+    "main.js": "/static/js/main.bab9ab4e.js",
+    "index.html": "/index.html",
+    "main.003e034f.css.map": "/static/css/main.003e034f.css.map",
+    "main.bab9ab4e.js.map": "/static/js/main.bab9ab4e.js.map"
   },
   "entrypoints": [
-    "static/css/main.189be087.css",
-    "static/js/main.04200040.js"
+    "static/css/main.003e034f.css",
+    "static/js/main.bab9ab4e.js"
   ]
 }
