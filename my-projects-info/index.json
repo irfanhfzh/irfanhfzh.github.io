@@ -62,7 +62,8 @@
 				"Bootstrap",
 				"Axios",
 				"Redux",
-				"Redux Saga"
+				"Redux Saga",
+				"react-beautiful-dnd"
 			],
 			"category": "Project Bootcamp",
 			"sourceCode": "https://github.com/irfanhfzh/project-mngy",
