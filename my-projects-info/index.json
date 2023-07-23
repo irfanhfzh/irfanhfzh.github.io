@@ -39,6 +39,7 @@
 			"technologyUsed": [
 				"React.js",
 				"Bootstrap",
+				"React-Bootstrap",
 				"Ant Design",
 				"Sweet Alert",
 				"Framer Motion",
